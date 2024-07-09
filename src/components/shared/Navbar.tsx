@@ -12,7 +12,7 @@ const Navbar = () => {
   const inActiveClasses =
     "text-muted-foreground transition-colors hover:text-foreground";
   return (
-    <div className="sticky top-0 flex flex-col justify-center bg-background">
+    <div className="sticky top-0 flex flex-col justify-center bg-background z-50">
       <div className="hidden flex-row justify-between gap-6 text-lg font-medium md:flex md:flex-row md:items-center mt-3">
         <NavLink to="/" className="">
           <img className="max-w-[220px] w-full" src={logo} alt="Website Logo" />
@@ -21,7 +21,7 @@ const Navbar = () => {
           <ModeToggle />
         </div>
       </div>
-      <header className="flex items-center gap-4 border-b bg-background py-2">
+      <header className="flex items-center gap-4 border-b bg-background pt-2 pb-4">
         <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
           <NavLink
             to="/"

@@ -7,11 +7,13 @@ import Cart from "../pages/Cart";
 import ProductManagement from "../pages/ProductManagement";
 import ProductDetails from "../pages/ProductDetails";
 import Products from "../pages/Products";
+import NotFound from "../pages/NotFound";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <NotFound></NotFound>,
     children: [
       {
         path: "",
