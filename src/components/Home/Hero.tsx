@@ -4,7 +4,7 @@ import heroImg from "../../assets/images/heroImg.jpg";
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
+    <div className="relative flex flex-col-reverse pb-16 pt-4 lg:pt-0 lg:flex-col lg:pb-0">
       <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
         <svg
           className="absolute left-0 hidden h-full text-white dark:text-secondary transform -translate-x-1/2 lg:block"
@@ -27,8 +27,7 @@ const Hero = () => {
           </p>
           <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none">
             Gear Up for Your
-            <br className="hidden md:block" />
-            {" "}Next{" "}
+            <br className="hidden md:block" /> Next{" "}
             <span className="inline-block text-destructive">Adventure</span>
           </h2>
           <p className="pr-5 mb-5 text-base text-gray-700 dark:text-gray-300 md:text-lg">
@@ -38,14 +37,17 @@ const Hero = () => {
           </p>
           <div className="flex items-center gap-3">
             <Link to="/" className="">
-              <Button className="hover:bg-secondary font-semibold">Get Started</Button>
+              <Button className="hover:bg-secondary font-semibold">
+                Get Started
+              </Button>
             </Link>
-            <Link
-              to="/about"
-              aria-label=""
-              className=""
-            >
-              <Button variant='outline' className="font-semibold dark:bg-stone-400 dark:text-black dark:hover:bg-stone-500 dark:hover:text-white">Learn more</Button>
+            <Link to="/about" aria-label="" className="">
+              <Button
+                variant="outline"
+                className="font-semibold dark:bg-stone-400 dark:text-black dark:hover:bg-stone-500 dark:hover:text-white"
+              >
+                Learn more
+              </Button>
             </Link>
           </div>
         </div>
