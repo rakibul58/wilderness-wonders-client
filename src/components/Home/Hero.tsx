@@ -4,7 +4,7 @@ import heroImg from "../../assets/images/heroImg.jpg";
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col-reverse lg:flex-col">
+    <div className="relative flex flex-col-reverse lg:flex-col mt-4 md:mt-0">
       <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
         <svg
           className="absolute left-0 hidden h-full text-white dark:text-secondary transform -translate-x-1/2 lg:block"
@@ -36,9 +36,9 @@ const Hero = () => {
             explore the great outdoors with confidence and ease.
           </p>
           <div className="flex items-center gap-3">
-            <Link to="/" className="">
+            <Link to="/products" className="">
               <Button className="hover:bg-stone-600 font-semibold">
-                Get Started
+                Shop now
               </Button>
             </Link>
             <Link to="/about" aria-label="" className="">

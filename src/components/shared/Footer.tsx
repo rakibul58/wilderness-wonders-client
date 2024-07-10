@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 const Footer = () => {
   return (
-    <footer className="justify-self-end relative mt-20 md:mt-28 bg-secondary">
+    <footer className="justify-self-end relative mt-20 md:mt-36 bg-secondary">
       <svg
         className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-secondary"
         preserveAspectRatio="none"
@@ -26,7 +26,10 @@ const Footer = () => {
             </Link>
             <div className="mt-4 lg:max-w-sm">
               <p className="text-sm">
-              Wilderness Wonders is your one-stop shop for all your camping and outdoor adventure needs. We offer a curated selection of high-quality gear and essentials to make your wilderness experiences unforgettable.
+                Wilderness Wonders is your one-stop shop for all your camping
+                and outdoor adventure needs. We offer a curated selection of
+                high-quality gear and essentials to make your wilderness
+                experiences unforgettable.
               </p>
             </div>
           </div>

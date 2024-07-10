@@ -29,7 +29,9 @@ const ProductCard = ({ ...props }: TProducts) => {
               {props?.description?.slice(0, 80) + "..."}
             </CardDescription>
             <div className="flex justify-between items-center mt-1 md:mt-0">
-              <h3 className="font-bold text-destructive">${props?.price}</h3>
+              <h3 className="font-bold text-accent-foreground">
+                ${props?.price}
+              </h3>
               <h3 className="font-semibold">⭐ {props?.rating}</h3>
             </div>
           </div>
