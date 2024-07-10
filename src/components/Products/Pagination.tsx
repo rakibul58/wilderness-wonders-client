@@ -32,7 +32,7 @@ const Pagination = ({ page, totalPage, setPage }: TPagination) => {
       <p className="text-xs">
         {page}
         <span className="mx-0.25">/</span>
-        {totalPage}
+        {!totalPage ? 1 : totalPage}
       </p>
 
       <button
