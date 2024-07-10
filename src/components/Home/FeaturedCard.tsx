@@ -17,7 +17,11 @@ const FeaturedCard = ({ ...props }: TProducts) => {
       {" "}
       <Card className="w-full max-w-[350px] dark:bg-secondary">
         <CardHeader>
-          <img src={default_thumbnail} alt="" />
+          <img
+            loading="lazy"
+            src={default_thumbnail}
+            alt="featured card image"
+          />
         </CardHeader>
         <CardContent>
           <div className="grid w-full items-center gap-4">

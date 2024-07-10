@@ -22,7 +22,12 @@ const Footer = () => {
               title="Company"
               className="inline-flex items-center"
             >
-              <img className="w-2/3" src={logo} alt="" />
+              <img
+                className="w-2/3"
+                src={logo}
+                alt="footer logo"
+                loading="lazy"
+              />
             </Link>
             <div className="mt-4 lg:max-w-sm">
               <p className="text-sm">

@@ -9,8 +9,9 @@ const CategoriesCard = ({ ...items }) => {
     >
       <Card className="relative rounded-lg overflow-hidden w-full min-w-[280px] md:w-[350px]">
         <img
-          alt=""
+          alt="category card image"
           src={items.image}
+          loading="lazy"
           className="absolute inset-0 min-w-full h-full object-cover"
         />
 
