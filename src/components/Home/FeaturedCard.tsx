@@ -21,6 +21,7 @@ const FeaturedCard = ({ ...props }: TProducts) => {
             loading="lazy"
             src={default_thumbnail}
             alt="featured card image"
+            className="rounded-lg"
           />
         </CardHeader>
         <CardContent>

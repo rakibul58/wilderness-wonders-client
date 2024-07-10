@@ -9,7 +9,14 @@ export const baseApi = createApi({
   endpoints: (builder) => ({
     getProducts: builder.query({
       query: (params) => {
-        return { url: `/products`, method: "GET", params: { ...params } };
+        console.log({ ...params });
+        const query = { ...params };
+        if (params.category==='') {
+          delete query.category;
+        }
+        console.log({query});
+        
+        return { url: `/products`, method: "GET", params: { ...query } };
       },
       providesTags: ["product"],
     }),
