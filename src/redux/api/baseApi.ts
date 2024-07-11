@@ -11,11 +11,16 @@ export const baseApi = createApi({
       query: (params) => {
         console.log({ ...params });
         const query = { ...params };
-        if (params.category==='') {
+        if (!params.category) {
           delete query.category;
         }
-        console.log({query});
-        
+        if (!params.maxPrice) {
+          delete query.maxPrice;
+        }
+        if (!params.minPrice) {
+          delete query.minPrice;
+        }
+
         return { url: `/products`, method: "GET", params: { ...query } };
       },
       providesTags: ["product"],
