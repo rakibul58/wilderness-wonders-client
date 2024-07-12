@@ -39,7 +39,15 @@ export const baseApi = createApi({
       }),
       invalidatesTags: ["product"],
     }),
+    updateProduct: builder.mutation({
+      query: (payload) => ({
+        url: `/products/${payload.id}`,
+        method: "PUT",
+        body: payload.data
+      }),
+      invalidatesTags: ["product"],
+    }),
   }),
 });
 
-export const { useGetProductsQuery, useAddProductMutation, useDeleteProductMutation } = baseApi;
+export const { useGetProductsQuery, useAddProductMutation, useDeleteProductMutation, useUpdateProductMutation } = baseApi;

@@ -4,6 +4,7 @@ import { TableCell, TableRow } from "../ui/table";
 import default_thumbnail from "../../assets/images/default_thumbnail.png";
 import { useDeleteProductMutation } from "../../redux/api/baseApi";
 import Swal from "sweetalert2";
+import UpdateProduct from "./UpdateProduct";
 
 const ProductTableRow = ({ ...item }: TProducts) => {
   const [deleteProduct, { isError }] = useDeleteProductMutation();
@@ -76,7 +77,7 @@ const ProductTableRow = ({ ...item }: TProducts) => {
               />
             </svg>
           </Button>
-          <Button>Delete</Button>
+          <UpdateProduct {...item} />
         </div>
       </TableCell>
     </TableRow>
