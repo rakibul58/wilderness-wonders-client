@@ -17,7 +17,7 @@ const ProductCard = ({ ...props }: TProducts) => {
       {" "}
       <Card className="w-full max-w-[350px] dark:bg-secondary">
         <CardHeader>
-          <img className="rounded-lg" src={props.thumbnail || default_thumbnail} alt="card thumbnail" loading="lazy" />
+          <img className="rounded-lg h-[220px] w-full object-cover" src={props.thumbnail || default_thumbnail} alt="card thumbnail" loading="lazy" />
         </CardHeader>
         <CardContent>
           <div className="grid w-full items-center gap-4">
@@ -26,7 +26,7 @@ const ProductCard = ({ ...props }: TProducts) => {
                 ? props?.name?.slice(0, 23) + "..."
                 : props?.name}
             </CardTitle>
-            <CardDescription>
+            <CardDescription className="md:max-h-[45px] md:min-h-[45px]">
               {props?.description?.length > 60
                 ? props?.description?.slice(0, 60) + "..."
                 : props?.description}

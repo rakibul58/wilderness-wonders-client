@@ -21,7 +21,7 @@ const FeaturedCard = ({ ...props }: TProducts) => {
             loading="lazy"
             src={props.thumbnail || default_thumbnail}
             alt="featured card image"
-            className="rounded-lg"
+            className="rounded-lg h-[220px] w-full object-cover"
           />
         </CardHeader>
         <CardContent>
@@ -31,7 +31,7 @@ const FeaturedCard = ({ ...props }: TProducts) => {
                 ? props?.name?.slice(0, 23) + "..."
                 : props?.name}
             </CardTitle>
-            <CardDescription>
+            <CardDescription className="md:max-h-[45px] md:min-h-[45px]">
               {props?.description?.length > 80
                 ? props?.description?.slice(0, 80) + "..."
                 : props?.description}

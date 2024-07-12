@@ -23,7 +23,7 @@ const FeaturedSection = () => {
       />
       <div className="w-full flex flex-col justify-center items-center gap-10">
         {products?.data?.result.length ? (
-          <div className="flex flex-col md:flex-row flex-wrap md:justify-center items-center gap-10">
+          <div className="flex flex-col md:flex-row flex-wrap md:justify-center items-center md:items-start gap-10">
             {products?.data?.result?.map((item: TProducts) => (
               <FeaturedCard key={item._id} {...item} />
             ))}
