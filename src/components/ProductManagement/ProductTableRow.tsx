@@ -22,7 +22,6 @@ const ProductTableRow = ({ ...item }: TProducts) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          // Replace this with your actual delete API call
           deleteProduct(item._id);
           if (!isError) {
             Swal.fire({
@@ -37,7 +36,6 @@ const ProductTableRow = ({ ...item }: TProducts) => {
               icon: "error",
             });
           }
-          // Optionally, you can refresh the product list or handle UI updates here
         } catch (error) {
           Swal.fire({
             title: "Opps!",
@@ -57,7 +55,9 @@ const ProductTableRow = ({ ...item }: TProducts) => {
         </div>
       </TableCell>
       <TableCell className="font-medium">
-        <Link className="hover:border-b" to={`/product-details/${item?._id}`}>{item.name}</Link>
+        <Link className="hover:border-b" to={`/product-details/${item?._id}`}>
+          {item.name}
+        </Link>
       </TableCell>
       <TableCell>{item.category}</TableCell>
       <TableCell>{item.stock}</TableCell>
