@@ -1,14 +1,14 @@
 # Wilderness Wonders
 
-[Live URL](https://wilderness-wonders-server.vercel.app/)
+[Live URL](https://wilderness-wonders.vercel.app/)
 
 ## Introduction
 
-Welcome to Wilderness Wonders – Your ultimate backend solution for a seamless camping gear shopping experience.
+Welcome to Wilderness Wonders – Your ultimate frontend solution for a seamless camping gear shopping experience.
 
 ## Project Description
 
-Wilderness Wonders is a comprehensive backend project designed to manage the operations of a camping gear shop. The primary purpose of this project is to provide robust, scalable, and efficient backend support for managing product listings, order placement, and inventory. Our goal is to ensure smooth and enjoyable shopping experience, while the shop management is equipped with the necessary tools to keep operations running efficiently.
+Wilderness Wonders frontend is designed to provide a user-friendly interface for the camping gear shop. It complements the backend by offering an intuitive and responsive shopping experience for customers. The frontend allows users to browse products, manage their shopping carts, and place orders easily. It also includes administrative functionalities for managing products.
 
 ## Features
 
@@ -16,15 +16,16 @@ Wilderness Wonders is a comprehensive backend project designed to manage the ope
 - Inventory Management: Track stock levels and manage inventory.
 - Order Management: Process customer orders and handle order status updates.
 - Search and Filter: Advanced search and filter options for products.
+- Responsive Design: Ensures a seamless experience across different devices.
 
 ## Technology Stack
 
-- Node.js: JavaScript runtime for building the server.
-- Express.js: Web framework for Node.js to create API endpoints.
-- MongoDB: NoSQL database for storing product, order, and customer data.
-- Mongoose: ODM for MongoDB to manage data models.
-- dotenv: Module for loading environment variables.
-- typescript: For Development
+- Vite: Fast and modern build tool for the frontend.
+- React: JavaScript library for building user interfaces.
+- TypeScript: Typed superset of JavaScript that compiles to plain JavaScript.
+- Tailwind CSS: Utility-first CSS framework for styling.
+- ShadCN: Component library for consistent design.
+- Redux: State management library for JavaScript apps.
 
 ## Installation Guideline
 
@@ -40,10 +41,16 @@ Instructions on how to install, configure, and get the project running locally.
 1. Clone the repo.
 
    ```bash
-   https://github.com/rakibul58/wilderness-wonders-server-batch-3-assignment-04.git
+   https://github.com/rakibul58/wilderness-wonders-batch-3-assignment-04.git
    ```
 
-2. Install node_module.
+2. Navigate to the project directory.
+
+   ```
+   cd wilderness-wonders-batch-3-assignment-04
+   ```
+
+3. Install the dependencies.
 
    ```bash
    npm install
@@ -51,46 +58,24 @@ Instructions on how to install, configure, and get the project running locally.
 
 ### Configuration
 
-1. Create a `.env` file in the root directory of the project.
+1. Create a `.env.local` file in the root directory of the project.
 
 2. Add necessary configuration variables in the `.env` file.
 
    Example:
+
    ```bash
-   NODE_ENV=development
-   PORT=5000
-   DATABASE_URL=
+   VITE_SERVER_API=https://wilderness-wonders-server.vercel.app/api/v1
+   VITE_CLOUDINARY_URI=
+   VITE_CLOUDINARY_PRESET=
    ```
 
 ### Usage
+
 1. Start the Server.
 
    ```bash
-   npm start
-   ```
-
-2. API Endpoints:
-
-- Product Endpoints:
-  - GET /products: Retrieve all products.
-  - POST /products: Add a new product.
-  - GET /products/:id: Retrieve a specific product.
-  - PUT /products/:id: Update a product.
-  - DELETE /products/:id: Delete a product.
-  - POST /products/checkout: Checkout a from cart.
-
-3. Example Request:
-
-   To add a new product, send a POST request to /products with the following JSON body:
-   ```
-   {
-    "name": "Osprey Atmos AG 65",
-    "description": "Anti-Gravity suspension system, adjustable harness and hipbelt, multiple pockets and compartments, hydration reservoir sleeve, removable top lid.",
-    "price": 14.99,
-    "stock": 180,
-    "category": "Backpack",
-    "thumbnail": ""
-   }
+   npm run dev
    ```
 
 ## Author
