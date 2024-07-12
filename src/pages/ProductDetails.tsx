@@ -4,6 +4,7 @@ import Loader from "../components/shared/Loader";
 import { Button } from "../components/ui/button";
 import { useAppDispatch, useAppSelector } from "../redux/hook";
 import { addToCart, removeFromCart } from "../redux/features/cartSlice";
+import default_thumbnail from "../assets/images/default_thumbnail.png";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -23,7 +24,7 @@ const ProductDetails = () => {
       <div className="w-full">
         <img
           className="max-h-[400px] max-w-[400px] w-full mx-auto bg-cover"
-          src={product?.data?.thumbnail}
+          src={product?.data?.thumbnail || default_thumbnail}
           alt="Product Image"
         />
       </div>

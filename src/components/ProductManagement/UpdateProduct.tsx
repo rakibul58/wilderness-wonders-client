@@ -91,8 +91,6 @@ const UpdateProduct = ({ ...item }: TProducts) => {
 
       const result = await updateProduct(productDetails);
 
-      console.log({ result });
-
       if (result.data.statusCode === 200) {
         Swal.fire({
           title: "Success!",

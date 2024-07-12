@@ -11,6 +11,7 @@ const ProductTableRow = ({ ...item }: TProducts) => {
   const [deleteProduct, { isError }] = useDeleteProductMutation();
 
   const handleDelete = () => {
+    // confirming before delete
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",

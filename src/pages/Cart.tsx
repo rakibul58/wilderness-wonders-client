@@ -61,7 +61,7 @@ const Cart = () => {
                 <div className="flex justify-end">
                   <Button disabled={total === 0} variant={"outline"}>
                     <Link to="/checkout" className="">
-                      Checkout
+                      Place Order
                     </Link>
                   </Button>
                 </div>

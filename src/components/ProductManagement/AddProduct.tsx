@@ -76,7 +76,7 @@ const AddProduct = () => {
 
         console.log({ productDetails });
         const result = await addProduct(productDetails);
-        console.log({ result });
+      
         if (result.data.statusCode === 201) {
           setName("");
           setPrice(0);
