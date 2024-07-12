@@ -39,15 +39,28 @@ export const baseApi = createApi({
       }),
       invalidatesTags: ["product"],
     }),
+    getAProduct: builder.query({
+      query: (id) => ({
+        url: `/products/${id}`,
+        method: "GET",
+      }),
+      providesTags: ["product"],
+    }),
     updateProduct: builder.mutation({
       query: (payload) => ({
         url: `/products/${payload.id}`,
         method: "PUT",
-        body: payload.data
+        body: payload.data,
       }),
       invalidatesTags: ["product"],
     }),
   }),
 });
 
-export const { useGetProductsQuery, useAddProductMutation, useDeleteProductMutation, useUpdateProductMutation } = baseApi;
+export const {
+  useGetProductsQuery,
+  useAddProductMutation,
+  useDeleteProductMutation,
+  useUpdateProductMutation,
+  useGetAProductQuery,
+} = baseApi;

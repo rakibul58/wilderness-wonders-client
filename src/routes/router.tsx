@@ -8,6 +8,7 @@ import ProductManagement from "../pages/ProductManagement";
 import ProductDetails from "../pages/ProductDetails";
 import Products from "../pages/Products";
 import NotFound from "../pages/NotFound";
+import GalleryPage from "../pages/GalleryPage";
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "gallery",
+        element: <GalleryPage />,
       },
     ],
   },
