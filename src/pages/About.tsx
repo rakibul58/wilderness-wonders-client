@@ -1,7 +1,17 @@
+import GetInTouch from "../components/About/GetInTouch";
+import Map from "../components/About/Map";
+import MeetTheTeam from "../components/About/MeetTheTeam";
+import MissionStatement from "../components/About/MissionStatement";
+import Socials from "../components/About/Socials";
+
 const About = () => {
   return (
     <div>
-      <h1>This is About Component</h1>
+      <GetInTouch />
+      <Map />
+      <Socials />
+      <MissionStatement />
+      <MeetTheTeam />
     </div>
   );
 };
