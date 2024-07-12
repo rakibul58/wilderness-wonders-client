@@ -5,10 +5,8 @@ const MeetTheTeam = () => {
     <section className="py-6">
       <div className="container flex flex-col items-center justify-center p-4 mx-auto space-y-8 sm:p-10">
         <ComponentTitle
-          title="Our Team"
-          subTitle="Meet the dedicated team members of Wilderness Wonders, committed to
-          providing you with the best camping gear and expertise to enhance your
-          outdoor adventures."
+          title="Dream Team"
+          subTitle="our talented team of professionals"
         />
         <div className="flex flex-row flex-wrap gap-10 md:gap-y-24 md:gap-x-36 justify-center">
           <div className="flex flex-col justify-center text-center">

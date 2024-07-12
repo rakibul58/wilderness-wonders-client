@@ -3,7 +3,7 @@ import { useGetAProductQuery } from "../redux/api/baseApi";
 import Loader from "../components/shared/Loader";
 import { Button } from "../components/ui/button";
 import { useAppDispatch, useAppSelector } from "../redux/hook";
-import { addTodo } from "../redux/features/cartSlice";
+import { addToCart, removeFromCart } from "../redux/features/cartSlice";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -59,17 +59,26 @@ const ProductDetails = () => {
             <div className="grid grid-cols-1 gap-1 p-3 even:bg-secondary/20 sm:grid-cols-3 sm:gap-4">
               <dt className="font-medium ">Quantity</dt>
               <dd className=" sm:col-span-2">
-                <span className="font-bold">
+                <Button
+                  disabled={0 === cardData?.quantity}
+                  onClick={() => dispatch(removeFromCart(product?.data?._id))}
+                  className="font-bold text-xl"
+                  variant="outline"
+                  size="icon"
+                >
+                  -
+                </Button>
+                <span className="font-bold text-xl mx-3">
                   {cardData?.quantity ? cardData?.quantity : 0}
                 </span>{" "}
                 <Button
                   disabled={product?.data?.stock === cardData?.quantity}
-                  onClick={() => dispatch(addTodo(product?.data))}
-                  className="ml-2"
+                  onClick={() => dispatch(addToCart(product?.data))}
+                  className="font-bold text-xl"
                   variant="outline"
-                  size="sm"
+                  size="icon"
                 >
-                  Add Card
+                  +
                 </Button>
               </dd>
             </div>

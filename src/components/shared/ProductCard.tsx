@@ -3,7 +3,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "../ui/card";
@@ -13,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ ...props }: TProducts) => {
   return (
-    <div className="hover:shadow-2xl shadow-primary dark:shadow-accent transition-shadow ease-in-out duration-300">
+    <Link to={`/product-details/${props?._id}`} className="hover:shadow-2xl shadow-primary dark:shadow-accent transition-shadow ease-in-out duration-300">
       {" "}
       <Card className="w-full max-w-[350px] dark:bg-secondary">
         <CardHeader>
@@ -48,7 +47,7 @@ const ProductCard = ({ ...props }: TProducts) => {
             </div>
           </div>
         </CardContent>
-        <CardFooter className="flex justify-end gap-3">
+        {/* <CardFooter className="flex justify-end gap-3">
           <Button
             className="font-semibold dark:bg-stone-400 dark:text-black dark:hover:bg-stone-500 dark:hover:text-white"
             variant="outline"
@@ -58,9 +57,9 @@ const ProductCard = ({ ...props }: TProducts) => {
           <Button className="hover:bg-stone-600 font-semibold">
             Add to Cart
           </Button>
-        </CardFooter>
+        </CardFooter> */}
       </Card>
-    </div>
+    </Link>
   );
 };
 

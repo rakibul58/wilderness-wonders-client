@@ -5,6 +5,7 @@ import default_thumbnail from "../../assets/images/default_thumbnail.png";
 import { useDeleteProductMutation } from "../../redux/api/baseApi";
 import Swal from "sweetalert2";
 import UpdateProduct from "./UpdateProduct";
+import { Link } from "react-router-dom";
 
 const ProductTableRow = ({ ...item }: TProducts) => {
   const [deleteProduct, { isError }] = useDeleteProductMutation();
@@ -55,7 +56,9 @@ const ProductTableRow = ({ ...item }: TProducts) => {
           <img src={item.thumbnail || default_thumbnail} alt="" />
         </div>
       </TableCell>
-      <TableCell className="font-medium">{item.name}</TableCell>
+      <TableCell className="font-medium">
+        <Link className="hover:border-b" to={`/product-details/${item?._id}`}>{item.name}</Link>
+      </TableCell>
       <TableCell>{item.category}</TableCell>
       <TableCell>{item.stock}</TableCell>
       <TableCell>${item.price}</TableCell>

@@ -8,10 +8,10 @@ const About = () => {
   return (
     <div>
       <GetInTouch />
-      <Map />
-      <Socials />
       <MissionStatement />
       <MeetTheTeam />
+      <Map />
+      <Socials />
     </div>
   );
 };

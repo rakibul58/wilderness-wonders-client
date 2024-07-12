@@ -5,8 +5,8 @@ const Socials = () => {
   return (
     <section className="p-6 mt-28">
       <ComponentTitle
-        title="Follow Us"
-        subTitle="Feel free to follow as and contact us"
+        title="Connect with Us"
+        subTitle="Follow Our Journey and Stay Updated"
       />
       <div className="container flex flex-wrap justify-center mx-auto dark:text-gray-400">
         <Link
