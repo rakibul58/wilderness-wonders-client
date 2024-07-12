@@ -12,7 +12,6 @@ const SearchComponent = ({ searchTerm, setSearchTerm }: TSearchProps) => {
       <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
       <Input
         value={searchTerm}
-        defaultValue={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         type="search"
         placeholder="Search products..."

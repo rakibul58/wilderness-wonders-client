@@ -22,7 +22,7 @@ const Products = () => {
   const [sort, setSort] = useState("");
   const [maxPrice, setMaxPrice] = useState<number | null>(null);
   const [minPrice, setMinPrice] = useState<number | null>(null);
-  const [category, setCategory] = useState("" || queryCategory);
+  const [category, setCategory] = useState(queryCategory || "");
   const [searchTerm, setSearchTerm] = useState("");
 
   const {

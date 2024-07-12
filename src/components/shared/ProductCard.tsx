@@ -17,7 +17,7 @@ const ProductCard = ({ ...props }: TProducts) => {
       {" "}
       <Card className="w-full max-w-[350px] dark:bg-secondary">
         <CardHeader>
-          <img className="rounded-lg" src={default_thumbnail} alt="card thumbnail" loading="lazy" />
+          <img className="rounded-lg" src={props.thumbnail || default_thumbnail} alt="card thumbnail" loading="lazy" />
         </CardHeader>
         <CardContent>
           <div className="grid w-full items-center gap-4">
@@ -44,7 +44,7 @@ const ProductCard = ({ ...props }: TProducts) => {
               <h3 className="font-bold text-accent-foreground">
                 ${props?.price}
               </h3>
-              <h3 className="font-semibold">⭐ {props?.rating}</h3>
+              <h3 className="font-semibold">{!props?.rating ? "⭐ 5.0": `⭐ ${props?.rating}`}</h3>
             </div>
           </div>
         </CardContent>

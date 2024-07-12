@@ -9,7 +9,6 @@ export const baseApi = createApi({
   endpoints: (builder) => ({
     getProducts: builder.query({
       query: (params) => {
-        console.log({ ...params });
         const query = { ...params };
         if (!params.category) {
           delete query.category;
@@ -27,13 +26,20 @@ export const baseApi = createApi({
     }),
     addProduct: builder.mutation({
       query: (data) => ({
-        url: "/products",
+        url: `/products`,
         method: "POST",
         body: data,
+      }),
+      invalidatesTags: ["product"],
+    }),
+    deleteProduct: builder.mutation({
+      query: (id) => ({
+        url: `/products/${id}`,
+        method: "DELETE",
       }),
       invalidatesTags: ["product"],
     }),
   }),
 });
 
-export const { useGetProductsQuery, useAddProductMutation } = baseApi;
+export const { useGetProductsQuery, useAddProductMutation, useDeleteProductMutation } = baseApi;
