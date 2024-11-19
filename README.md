@@ -41,7 +41,7 @@ Instructions on how to install, configure, and get the project running locally.
 1. Clone the repo.
 
    ```bash
-   https://github.com/rakibul58/wilderness-wonders-batch-3-assignment-04.git
+   https://github.com/rakibul58/wilderness-wonders-client.git
    ```
 
 2. Navigate to the project directory.
